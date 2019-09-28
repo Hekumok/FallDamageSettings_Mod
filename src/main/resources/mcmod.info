@@ -1,0 +1,16 @@
+[
+{
+  "modid": "${modid}",
+  "name": "FallSettings Mod",
+  "description": "Minimalistic mod that allows you to control a fall damage.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Hekumok"],
+  "credits": "The Forge and FML guys, for making the Forge modding API",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
