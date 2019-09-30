@@ -1,0 +1,32 @@
+package com.hekumok.hooklib.asm;
+
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+
+@Retention(RetentionPolicy.RUNTIME)
+public @interface At {
+    /**
+     * Тип точки инъекции
+     */
+    public InjectionPoint point();
+
+    /**
+     * Сдвиг относительно точки инъекции
+     */
+    public Shift shift() default Shift.AFTER;
+
+    /**
+     * Конкретизация, имя метода, например
+     */
+    public String target() default "";
+
+    /**
+     * Номер локальной переменной для перехвата
+     */
+    public int targetVar() default -1;
+
+    /**
+     * Какая по счету операция. -1, если все
+     */
+    public int ordinal() default -1;
+}
