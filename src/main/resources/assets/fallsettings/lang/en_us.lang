@@ -1,0 +1,17 @@
+# Config GUI strings
+fallsettings.config.useentitiessettingsforplayer=Use creatures settings for player
+fallsettings.config.useentitiessettingsforplayer.tooltip=If checked, creatures settings will be applied to the player instead of his own
+fallsettings.config.entityfalldamage=Fall damage settings for creatures
+fallsettings.config.playerfalldamage=Fall damage settings for player
+fallsettings.config.entityfalldamage.minheight=Minimal height
+fallsettings.config.playerfalldamage.minheight=Minimal height
+fallsettings.config.entityfalldamage.minheight.tooltip=Only falling above this height will deal damage
+fallsettings.config.playerfalldamage.minheight.tooltip=Only falling above this height will deal damage
+fallsettings.config.entityfalldamage.damage=Damage
+fallsettings.config.playerfalldamage.damage=Damage
+fallsettings.config.entityfalldamage.damage.tooltip=Damage per each N blocks
+fallsettings.config.playerfalldamage.damage.tooltip=Damage per each N blocks
+fallsettings.config.entityfalldamage.blocksquantity=Quantity of blocks
+fallsettings.config.playerfalldamage.blocksquantity=Quantity of blocks
+fallsettings.config.entityfalldamage.blocksquantity.tooltip=Quantity of blocks for which damage will be dealt
+fallsettings.config.playerfalldamage.blocksquantity.tooltip=Quantity of blocks for which damage will be dealt

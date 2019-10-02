@@ -1,0 +1,17 @@
+# Config GUI strings
+fallsettings.config.useentitiessettingsforplayer=Использовать настройки существ для игрока
+fallsettings.config.useentitiessettingsforplayer.tooltip=Если галочка установлена, для игрока будут действовать настройки существ вместо его собственных
+fallsettings.config.entityfalldamage=Настройки урона от падения для существ
+fallsettings.config.playerfalldamage=Настройки урона от падения для игрока
+fallsettings.config.entityfalldamage.minheight=Минимальная высота
+fallsettings.config.playerfalldamage.minheight=Минимальная высота
+fallsettings.config.entityfalldamage.minheight.tooltip=Только падение свыше этой высоты нанесет урон
+fallsettings.config.playerfalldamage.minheight.tooltip=Только падение свыше этой высоты нанесет урон
+fallsettings.config.entityfalldamage.damage=Урон
+fallsettings.config.playerfalldamage.damage=Урон
+fallsettings.config.entityfalldamage.damage.tooltip=Урон за каждые N блоков
+fallsettings.config.playerfalldamage.damage.tooltip=Урон за каждые N блоков
+fallsettings.config.entityfalldamage.blocksquantity=Количество блоков
+fallsettings.config.playerfalldamage.blocksquantity=Количество блоков
+fallsettings.config.entityfalldamage.blocksquantity.tooltip=Количество блоков, за которые будет наноситься урон
+fallsettings.config.playerfalldamage.blocksquantity.tooltip=Количество блоков, за которые будет наноситься урон
