@@ -80,3 +80,10 @@ processResources {
         exclude 'mcmod.info'
     }
 }
+
+jar {
+    manifest {
+        attributes 'FMLCorePlugin': 'com.hekumok.fallsettings.ModHookLoader'
+        attributes 'FMLCorePluginContainsFMLMod': 'true'
+    }
+}
