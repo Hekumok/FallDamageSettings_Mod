@@ -22,7 +22,7 @@ public class ModConfig {
         public int minHeight = 3;
 
         @Config.Comment("Damage per each N blocks")
-        @Config.RangeInt(min = 1)
+        @Config.RangeInt(min = 0)
         public int damage = 1;
 
         @Config.Comment("Quantity of blocks for which damage will be dealt")
