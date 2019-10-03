@@ -2,15 +2,14 @@ package com.hekumok.hooklib.asm;
 
 import com.hekumok.hooklib.minecraft.HookLibPlugin;
 import com.hekumok.hooklib.minecraft.MinecraftClassTransformer;
+import com.hekumok.hooklib.utils.OpcodesHelper;
 import org.objectweb.asm.Label;
 import org.objectweb.asm.MethodVisitor;
 import org.objectweb.asm.Opcodes;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.commons.AdviceAdapter;
 
-import static com.hekumok.hooklib.asm.InjectionPoint.HEAD;
-import static com.hekumok.hooklib.asm.InjectionPoint.METHOD_CALL;
-import static com.hekumok.hooklib.asm.InjectionPoint.VAR_ASSIGNMENT;
+import static com.hekumok.hooklib.asm.InjectionPoint.*;
 
 /**
  * Класс, непосредственно вставляющий хук в метод.
@@ -56,13 +55,11 @@ public abstract class HookInjectorMethodVisitor extends AdviceAdapter {
     public static class ByAnchor extends HookInjectorMethodVisitor {
 
         private Integer ordinal;
-        private Type varType;
 
         public ByAnchor(MethodVisitor mv, int access, String name, String desc, AsmHook hook, HookInjectorClassVisitor cv) {
             super(mv, access, name, desc, hook, cv);
 
             ordinal = hook.getAnchorOrdinal();
-            varType = hook.getHookMethodReturnType();
         }
 
         @Override
@@ -98,30 +95,10 @@ public abstract class HookInjectorMethodVisitor extends AdviceAdapter {
         public void visitVarInsn(int opcode, int var) {
             super.visitVarInsn(opcode, var);
 
-            if(hook.getAnchorPoint() == VAR_ASSIGNMENT && opcode == varType.getOpcode(54) && var == hook.getAnchorTargetVar()) {
-                if(visitOrderedHook()) {
-                    super.visitVarInsn(opcode, var);
-                }
+            if (hook.getAnchorPoint() == VAR_ASSIGNMENT && OpcodesHelper.isVarStore(opcode) && var == hook.getAnchorTargetVar()) {
+                visitOrderedHook();
             }
         }
-
-//        @Override
-//        public void visitVarInsn(int opcode, int var) {
-//            boolean isHooked = false;
-//
-//            if(hook.getAnchorPoint() == VAR_ASSIGNMENT && opcode == varType.getOpcode(54) && var == hook.getAnchorTargetVar()) {
-//                if(visitOrderedHook()) {
-//                    isHooked = true;
-//
-//                    super.visitVarInsn(opcode, var);
-//                    super.visitInsn(Opcodes.POP);
-//                }
-//            }
-//
-//            if(!isHooked) {
-//                super.visitVarInsn(opcode, var);
-//            }
-//        }
 
         protected void onMethodEnter() {
             if (hook.getAnchorPoint() == HEAD)
@@ -131,7 +108,6 @@ public abstract class HookInjectorMethodVisitor extends AdviceAdapter {
         protected void onMethodExit(int opcode) {
             if (hook.getAnchorPoint() == InjectionPoint.RETURN && opcode != Opcodes.ATHROW)
                 visitOrderedHook();
-
         }
 
         private boolean visitOrderedHook() {

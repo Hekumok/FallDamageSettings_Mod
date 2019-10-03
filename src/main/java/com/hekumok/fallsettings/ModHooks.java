@@ -18,7 +18,7 @@ public class ModHooks {
         }
     }
 
-    @Hook(at = @At(point = InjectionPoint.VAR_ASSIGNMENT, targetVar = 6, ordinal = 0))
+    @Hook(at = @At(point = InjectionPoint.VAR_ASSIGNMENT, targetVar = 6, ordinal = 0), setLocalVar = 6)
     public static int fall(EntityLivingBase entity, float distance, float damageMultiplier) {
         boolean isPlayer = entity instanceof EntityPlayerMP;
         boolean shouldUsePlayerSettings = isPlayer && !ModConfig.useEntitiesSettingsForPlayer;

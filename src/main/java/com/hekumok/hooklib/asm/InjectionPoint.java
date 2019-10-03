@@ -21,5 +21,4 @@ public enum InjectionPoint {
      * Когда происходит присвоение переменной где-то в теле хукнутого
      */
     VAR_ASSIGNMENT
-
 }
