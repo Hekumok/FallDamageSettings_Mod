@@ -14,7 +14,7 @@ import org.apache.logging.log4j.Logger;
 public class FallSettingsMod {
     public static final String MODID = "@MODID@";
 
-    private static Logger logger;
+    public static Logger logger;
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
