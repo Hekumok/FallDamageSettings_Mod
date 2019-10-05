@@ -10,7 +10,7 @@ buildscript {
 apply plugin: 'net.minecraftforge.gradle.forge'
 //Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 
-ext.modid = "fallsettings"
+ext.modid = "falldamagesettings"
 
 version = "0.1.0"
 group = "com.hekumok.${modid}" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
@@ -83,7 +83,7 @@ processResources {
 
 jar {
     manifest {
-        attributes 'FMLCorePlugin': 'com.hekumok.fallsettings.ModHookLoader'
+        attributes 'FMLCorePlugin': 'com.hekumok.falldamagesettings.ModHookLoader'
         attributes 'FMLCorePluginContainsFMLMod': 'true'
     }
 }

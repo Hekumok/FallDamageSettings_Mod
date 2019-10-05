@@ -1,4 +1,4 @@
-package com.hekumok.fallsettings;
+package com.hekumok.falldamagesettings;
 
 import com.hekumok.hooklib.asm.*;
 import net.minecraft.block.material.Material;
@@ -27,7 +27,7 @@ public class ModHooks {
             // if that happens so we need to fix this code and calculate also neighboring blocks on which entity stays
             // by x & z axis using bounding box
             if(entity.world.getBlockState(bp).getMaterial() != material) {
-                FallSettingsMod.logger.error(FallSettingsMod.MODID +
+                FallDamageSettingsMod.logger.error(FallDamageSettingsMod.MODID +
                         ": Smth went wrong while calculating the entry point into water/lava (when falling)");
             }
 

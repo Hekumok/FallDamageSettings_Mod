@@ -1,10 +1,10 @@
-package com.hekumok.fallsettings;
+package com.hekumok.falldamagesettings;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.common.config.Config;
 
-@Config(modid = FallSettingsMod.MODID, category = ModConfig.CATEGORY)
+@Config(modid = FallDamageSettingsMod.MODID, category = ModConfig.CATEGORY)
 public class ModConfig {
     @Config.Ignore
     public static final String CATEGORY = "config";
