@@ -1,0 +1,20 @@
+# [FallDamageSettings Mod](https://www.curseforge.com/minecraft/mc-mods/falldamagesettings-mod)
+Minimalistic mod that fixes old Minecraft bug and also allows you to control fall damage (even at fall into water/lava).
+
+## A few words about the first part
+Minecraft has an old bug which incorrectly calculates fall damage. You can read about it, for example, [here](https://www.minecraftforum.net/forums/minecraft-java-edition/survival-mode/2577601-facts-fall-damage). You can see that, for example, when you fall from a height of 11/12 blocks, you will receive the same damage (8), but according to the formula CEIL(FALL_HEIGHT - 3) ['ceil' means rounding up], which is used in Minecraft (if you don’t have wearing enchanted armor, active potion effects, etc.), you should take 9 damage when falling from a height of 12 blocks. This is because the altitude that you flew on the last tick before landing does not add to the total fall distance. This mod fixes it.
+
+## About second part
+Mod allows you to set your own fall damage formula (almost). You can set minimal height, only falling above which you will receive damage from falling, and damage for every N blocks that you flew down. So formula looks like CEIL((FALL_HEIGHT - MIN_HEIGHT) * DAMAGE / BLOCKS_QUANTITY). In vanilla these values are 3, 1, 1. So only falls above height of 3 blocks deal damage and for each block you take 1 damage (1damage is half life). You can set your own values separately for players and creatures. Also if you like to have more realistic game (because in real life you most likely die when fall into water from a great height) you can configure damage at fall into water/lava.
+NOTE that all damage reducers like wearing enchanted (with Feather Falling or Protection) armor or landing on hay block etc. still work and reduce your fall damage.
+
+# [FallDamageSettings Mod](https://www.curseforge.com/minecraft/mc-mods/falldamagesettings-mod) [RU]
+
+Небольшой мод, который исправляет старую ошибку Minecraft, а также позволяет управлять уроном от падения (даже при падении в воду/лаву).
+
+## Несколько слов о первой части
+В Minecraft есть старая ошибка, которая неправильно рассчитывает урон от падения. Вы можете прочитать об этом, например, [здесь [EN]](https://www.minecraftforum.net/forums/minecraft-java-edition/survival-mode/2577601-facts-fall-damage) или [здесь [RU]](https://minecraft-ru.gamepedia.com/%D0%9E%D0%B1%D1%81%D1%83%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5:%D0%A3%D1%80%D0%BE%D0%BD). Вы можете видеть, что, например, когда вы упадете с высоты 11/12 блоков, вы получите одинаковый урон (8), но согласно формуле CEIL(FALL_HEIGHT - 3) ['ceil' означает округление в большую сторону], которая используется в Minecraft (если на вас не надета зачарованная броня, нет активных эффектов зелий и т. д.), вы должны получить 9 урона при падении с высоты в 12 блоков. Это происходит потому, что высота, которую вы пролетели на последнем тике перед приземлением, не прибавляется к общему расстоянию падения. Этот мод исправляет это.
+
+## О второй части
+Мод позволяет установить собственную формулу урона от падения (почти). Вы можете установить минимальную высоту, только падая выше которой вы будете получать урон от падения, и урон за каждые N блоков, которые вы пролетели. Таким образом, формула выглядит как CEIL((FALL_HEIGHT - MIN_HEIGHT) * DAMAGE / BLOCKS_QUANTITY). В ванили эти значения равны 3, 1, 1. Таким образом, только падение с высоты выше 3 блоков наносит урон, и за каждый блок вы получаете 1 урон (1 урон - половина жизни). Вы можете установить свои собственные значения отдельно для игроков и существ. Также, если вам нравится более реалистичная игра (потому что в реальной жизни вы, скорее всего, умрете при падении в воду с большой высоты), вы можете настроить урон при падении в воду/лаву.
+УЧТИТЕ, что все средства уменьшения урона, такие как ношение зачарованной (Невесомостью [Feather Falling] или Защитой [Protection]) брони или приземление на блок сена и т.д., все еще работают и уменьшают ваши повреждения от падения.
