@@ -12,7 +12,7 @@ apply plugin: 'net.minecraftforge.gradle.forge'
 
 ext.modid = "falldamagesettings"
 
-version = "0.1.0"
+version = "1.0.0"
 group = "com.hekumok.${modid}" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = modid
 
