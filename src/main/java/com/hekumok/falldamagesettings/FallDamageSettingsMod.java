@@ -10,7 +10,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import org.apache.logging.log4j.Logger;
 
-@Mod(modid = FallDamageSettingsMod.MODID, useMetadata = true)
+@Mod(modid = FallDamageSettingsMod.MODID, useMetadata = true, acceptableRemoteVersions = "*")
 public class FallDamageSettingsMod {
     public static final String MODID = "@MODID@";
 
