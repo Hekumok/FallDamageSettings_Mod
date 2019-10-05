@@ -2,14 +2,14 @@
 {
   "modid": "${modid}",
   "name": "FallDamageSettings Mod",
-  "description": "Minimalistic mod that allows you to control a fall damage.",
+  "description": "Minimalistic mod that fixes old Minecraft bug and also allows you to control fall damage (even at fall into water/lava).",
   "version": "${version}",
   "mcversion": "${mcversion}",
-  "url": "",
+  "url": "https://www.curseforge.com/minecraft/mc-mods/falldamagesettings-mod",
   "updateUrl": "",
   "authorList": ["Hekumok"],
   "credits": "The Forge and FML guys, for making the Forge modding API",
-  "logoFile": "",
+  "logoFile": "falldamagesettings.logo.png",
   "screenshots": [],
   "dependencies": []
 }
